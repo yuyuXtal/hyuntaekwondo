@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>현 태권도 · 사범진 소개</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;padding:0;background:#ffffff;}
+  *{box-sizing:border-box;}
+  /* responsive scaling: 1280px fixed stage scaled to browser width */
+  #scale-viewport{position:relative;width:100%;overflow:hidden;}
+  #scale-stage{position:absolute;top:0;left:0;width:1280px;transform-origin:top left;}
+  @keyframes introLineUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+  .intro-line{opacity:0;transform:translateY(14px);}
+  .intro-line.in-view{animation:introLineUp .7s cubic-bezier(.22,.61,.36,1) forwards;}
+  @media (prefers-reduced-motion: reduce){
+    .intro-line{opacity:1;transform:none;}
+    .intro-line.in-view{animation:none;}
+  }
+  .flip-card{perspective:1600px;cursor:pointer;}
+  .flip-inner{position:relative;width:100%;height:100%;transition:transform .6s cubic-bezier(.4,0,.2,1);transform-style:preserve-3d;}
+  .flip-card.flipped .flip-inner{transform:rotateY(180deg);}
+  .flip-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:18px;overflow:hidden;}
+  .flip-back{transform:rotateY(180deg);}
+  .flip-face img.bg{width:100%;height:100%;object-fit:cover;display:block;}
+  .gold-foot{position:absolute;left:0;bottom:0;width:100%;height:82px;background:#CFA543;}
+  .flip-btn{position:absolute;left:50%;transform:translateX(-50%);transition:transform .2s cubic-bezier(.22,.61,.36,1);cursor:pointer;display:block;}
+  .flip-btn:hover{transform:translateX(-50%) scale(1.07);}
+</style>
+</head>
+<body>
+<div id="scale-viewport"><div id="scale-stage">
+<div style="width:1280px;margin:0 auto;position:relative;background:#ffffff;font-size:0;">
+
+  <!-- HERO (header + intro baked, title/cards region replaced with clean background) -->
+  <div style="position:relative;width:1280px;height:754px;overflow:hidden;">
+    <img src="assets/p3_hero.jpg" style="display:block;width:1280px;height:1955px;">
+
+    <!-- navy panel masking the baked-in intro text (keeps gold lines above intact) -->
+    <div style="position:absolute;left:0;top:226px;width:1280px;height:528px;background:#223582;"></div>
+
+    <!-- mask baked-in header logotype -->
+    <div style="position:absolute;left:385px;top:46px;width:505px;height:50px;background:#223582;"></div>
+
+    <!-- live animated intro text (Noto Sans KR) -->
+    <div style="position: absolute; left: 0; top: 266px; width: 1280px; text-align: center; font-family: 'Noto Sans KR',sans-serif; font-weight: 300; font-size: 20px; line-height: 48px; color: #8494D3; letter-spacing: -0.2px">
+      <div class="intro-line">그는 막 수련을 마친 듯 목에 하얀 수건을 걸친 채였다. 땀으로 젖어 몸에 달라붙은</div>
+      <div class="intro-line">흰색 반팔 티셔츠 아래로 단단한 가슴과 어깨의 윤곽이 고스란히 드러났다. 쿵, 쿵.</div>
+      <div class="intro-line">샌드백을 정리하는 낮은 소음만이 두 사람 사이의 정적을 메우고 있었다. 그가</div>
+      <div class="intro-line">샌드백의 위치를 바로잡고 고개를 돌리는 순간, 당신의 목소리가 들려왔다.</div>
+      <div style="height:23px;"></div>
+      <div class="intro-line">정돈된 동작으로 샌드백에서 손을 뗀 그가 당신을 향해 돌아섰다. 그의 시선은</div>
+      <div class="intro-line">언제나처럼 흔들림 없이 곧고, 그 깊이를 알 수 없는 회색빛 눈동자는 당신의</div>
+      <div class="intro-line">얼굴에 정확히 꽂혔다. 아무런 감정도 읽히지 않는 무표정한 얼굴. 그는 잠시 아무</div>
+      <div class="intro-line">말 없이 당신을 바라보기만 했다. 마치 당신이 무슨 말을 할지 기다리는 것처럼,</div>
+      <div class="intro-line">혹은 그저 당신의 존재를 확인하는 것처럼.</div>
+    </div>
+
+    <a href="Home_v2.html" aria-label="현 태권도 홈으로 이동" style="position:absolute;left:393px;top:53px;width:495px;height:37px;display:block;cursor:pointer;">
+      <img src="assets/logotype_header.png" style="display:block;width:495px;height:37px;">
+    </a>
+    <a href="Brand_v2.html" aria-label="현 태권도" style="position:absolute;left:900px;top:55px;width:130px;height:55px;display:block;cursor:pointer;"></a>
+    <a href="Instructor_v2.html" aria-label="사범진 소개" style="position:absolute;left:1090px;top:55px;width:145px;height:55px;display:block;cursor:pointer;"></a>
+  </div>
+
+  <!-- extra breathing room + restored champion-gold divider tick -->
+  <div style="position:relative;width:1280px;height:130px;background:#223582;">
+    <div style="position:absolute;left:639px;top:17.5px;width:2px;height:95px;background:#CFA543;"></div>
+  </div>
+
+  <!-- title (navy) with cards straddling the navy/white boundary -->
+  <div style="position:relative;width:1280px;height:1207.75px;">
+    <div style="position:absolute;left:0;top:0;width:1280px;height:761px;overflow:hidden;background:#223582;">
+      <img src="assets/new_hero.png" style="display:block;width:1280px;height:1154px;">
+    </div>
+
+    <!-- left flip card: photo front/back, thick white border + thin elite-blue border flips with the card -->
+    <div class="flip-card" style="position:absolute;left:51.25px;top:299px;width:781.25px;height:818.75px;">
+      <div class="flip-inner">
+        <div class="flip-face flip-front" style="border-radius:22px;background:#ffffff;border:3px solid #223582;box-sizing:border-box;padding:14px;">
+          <img class="bg" src="assets/photo_front.png" style="border-radius:12px;object-position:center 22%;">
+          <img class="flip-btn" src="assets/flip_btn.png" style="width: 240px; height: auto; left: 371px; top: 738px; position: absolute; transform: translate(-50%, 3px)">
+        </div>
+        <div class="flip-face flip-back" style="border-radius:22px;background:#ffffff;border:3px solid #223582;box-sizing:border-box;padding:14px;">
+          <img class="bg" src="assets/photo_back.png" style="border-radius:12px;object-position:center 20%;">
+          <img class="flip-btn" src="assets/flip_btn.png" style="width: 240px; height: auto; left: 371px; top: 738px; position: absolute; transform: translate(-50%, 3px)">
+        </div>
+      </div>
+    </div>
+
+    <!-- right flip card: registration (front) <-> relationship file (back) -->
+    <div class="flip-card" style="position:absolute;left:858.75px;top:299px;right:0px;height:818.75px;">
+      <div class="flip-inner">
+        <div class="flip-face flip-front">
+          <img class="bg" src="assets/info_front.jpg">
+          <div class="gold-foot"><img class="flip-btn" src="assets/flip_btn.png" style="width: 240px; height: auto; position: absolute; left: 209px; top: 21px; transform: translate(-47%, 0px)"></div>
+
+        </div>
+        <div class="flip-face flip-back">
+          <img class="bg" src="assets/info_back.jpg">
+          <div class="gold-foot"><img class="flip-btn" src="assets/flip_btn.png" style="width: 240px; height: auto; position: absolute; left: 209px; top: 21px; transform: translate(-47%, 0px)"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- white gap -->
+  <div style="width:1280px;height:65px;background:#ffffff;"></div>
+
+  <!-- IMAGE heading -->
+  <img src="assets/p3_image_heading.jpg" style="display:block;width:1280px;height:95px;">
+
+  <!-- upload grid -->
+  <div style="width:1124.5px;margin:66.75px auto 0;display:grid;grid-template-columns:repeat(3,345.5px);column-gap:44px;row-gap:37.75px;">
+    <label class="up-box" style="width:345.5px;height:347px;border-radius:18px;overflow:hidden;background-image:url('assets/empty_box.jpg');background-size:cover;background-position:center;cursor:pointer;display:block;"><input type="file" accept="image/*" style="display:none;"></label>
+    <label class="up-box" style="width:345.5px;height:347px;border-radius:18px;overflow:hidden;background-image:url('assets/empty_box.jpg');background-size:cover;background-position:center;cursor:pointer;display:block;"><input type="file" accept="image/*" style="display:none;"></label>
+    <label class="up-box" style="width:345.5px;height:347px;border-radius:18px;overflow:hidden;background-image:url('assets/empty_box.jpg');background-size:cover;background-position:center;cursor:pointer;display:block;"><input type="file" accept="image/*" style="display:none;"></label>
+    <label class="up-box" style="width:345.5px;height:347px;border-radius:18px;overflow:hidden;background-image:url('assets/empty_box.jpg');background-size:cover;background-position:center;cursor:pointer;display:block;"><input type="file" accept="image/*" style="display:none;"></label>
+    <label class="up-box" style="width:345.5px;height:347px;border-radius:18px;overflow:hidden;background-image:url('assets/empty_box.jpg');background-size:cover;background-position:center;cursor:pointer;display:block;"><input type="file" accept="image/*" style="display:none;"></label>
+    <label class="up-box" style="width:345.5px;height:347px;border-radius:18px;overflow:hidden;background-image:url('assets/empty_box.jpg');background-size:cover;background-position:center;cursor:pointer;display:block;"><input type="file" accept="image/*" style="display:none;"></label>
+    <label class="up-box" style="width:345.5px;height:347px;border-radius:18px;overflow:hidden;background-image:url('assets/empty_box.jpg');background-size:cover;background-position:center;cursor:pointer;display:block;"><input type="file" accept="image/*" style="display:none;"></label>
+    <label class="up-box" style="width:345.5px;height:347px;border-radius:18px;overflow:hidden;background-image:url('assets/empty_box.jpg');background-size:cover;background-position:center;cursor:pointer;display:block;"><input type="file" accept="image/*" style="display:none;"></label>
+    <label class="up-box" style="width:345.5px;height:347px;border-radius:18px;overflow:hidden;background-image:url('assets/empty_box.jpg');background-size:cover;background-position:center;cursor:pointer;display:block;"><input type="file" accept="image/*" style="display:none;"></label>
+  </div>
+
+  <div style="width:1280px;height:70px;background:#ffffff;"></div><div style="width:1280px;background:#223582;font-family:'Noto Sans KR',sans-serif;">
+
+
+    <div style="padding:64px 60px 0;display:grid;grid-template-columns:280px 230px 150px 404px;gap:32px;">
+      <div>
+        <img src="assets/footer_logo.png" style="display:block;width:250px;height:auto;margin-bottom:16px;">
+        <div style="font-size:14px;color:#b9c0dd;">현태권도 | HYUN TAEKWONDO</div>
+      </div>
+      <div>
+        <div style="color:#CEA542;font-weight:700;font-size:14px;letter-spacing:.05em;margin-bottom:18px;">LOCATION</div>
+        <div style="font-size:14px;color:#e3e6f2;line-height:1.6;">
+          <div><span style="font-weight:700;">Address.</span> 서울특별시 마포구 ××로 156<br>HY타워 1F 현태권도</div>
+          <div style="margin-top:11px;"><span style="font-weight:700;">Tel.</span> 02-××54-22××</div>
+          <div style="margin-top:11px;"><span style="font-weight: 700;">Hours.</span> Mon-Fri 13:00 - 22:00<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Sat 10:00 - 15:00</div>
+          <div style="margin-top: 11px; width: 237px; height: 42px"><span style="font-weight:700;">Closed.</span> Sunday &amp; National Holidays</div>
+        </div>
+      </div>
+      <div>
+        <div style="box-sizing: border-box"><div style="color:#CEA542;font-weight:700;font-size:14px;letter-spacing:.05em;margin-bottom:18px;">NAVIGATION</div><div style="display:flex;flex-direction:column;gap:11px;font-size:14px;color:#e3e6f2;line-height:1.5;">
+          <a href="Home_v2.html" style="color:inherit;text-decoration:none;">• 홈 (Home)</a>
+          <a href="Brand_v2.html" style="color:inherit;text-decoration:none;">• 현태권도</a>
+          <a href="Instructor_v2.html" style="color:inherit;text-decoration:none;">• 사범진 소개</a>
+        </div></div>
+
+      </div>
+      <div style="width: 298px; height: 249px">
+        <div style="color:#CEA542;font-weight:700;font-size:14px;letter-spacing:.05em;margin-bottom:18px;">INFORMATION</div>
+        <div style="font-size: 13.5px; color: #e3e6f2; line-height: 1.9; white-space: nowrap; width: 294px; height: 112px">
+          • 유치부 · 초등부 · 중고등부 · 성인부· 선수부 운영<br>
+          • 체험수업 및 입관 상담 가능<br>
+          • 건물 내 주차 가능<br>
+          • 안전교육 및 보험 가입 완료
+        </div>
+      </div>
+    </div><div style="margin:48px 60px 0;padding:26px 0;border-top:1px solid rgba(255,255,255,.14);">
+      <div style="color:#CEA542;font-weight:700;font-size:13px;letter-spacing:.05em;margin-bottom:12px;">NOTICE</div>
+      <div style="font-size:12.5px;color:#9aa3c9;line-height:1.7;">
+        본 사이트에 등장하는 모든 인물, 사건, 단체 및 설정은 실제와 무관한 가상의 창작 콘텐츠입니다.<br>
+        본 사이트의 이미지 및 콘텐츠의 무단 복제·배포를 금합니다.<br>
+        수업 일정 및 운영 시간은 내부 사정에 따라 변경될 수 있습니다.
+      </div>
+    </div>
+
+    <div style="margin:0 60px;padding:22px 0;border-top:1px solid rgba(255,255,255,.14);text-align:center;font-size:12.5px;color:#8f99c4;">© 2026 HYUN TAEKWONDO. All Rights Reserved.</div>
+  </div>
+
+</div>
+</div></div>
+
+<script>
+// Standalone re-implementation of the Instructor.dc.html DCLogic (componentDidMount).
+// Same behavior, no proprietary runtime: staggered intro reveal, card flip, image upload.
+document.addEventListener('DOMContentLoaded', function () {
+  var root = document;
+
+  // one-time staggered entrance for intro text
+  var lines = [].slice.call(root.querySelectorAll('.intro-line'));
+  if (lines.length) {
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) {
+      lines.forEach(function (l) { l.style.opacity = 1; });
+    } else {
+      var stagger = 110; // ms between each line's reveal
+      var reveal = function () {
+        lines.forEach(function (l, i) {
+          l.style.animationDelay = (i * stagger) + 'ms';
+          l.classList.add('in-view');
+        });
+      };
+      var container = lines[0].closest('div');
+      if ('IntersectionObserver' in window && container) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { reveal(); io.disconnect(); }
+          });
+        }, { threshold: 0.3 });
+        io.observe(container);
+      } else {
+        reveal();
+      }
+    }
+  }
+
+  // card flip
+  root.querySelectorAll('.flip-card').forEach(function (card) {
+    card.addEventListener('click', function () { card.classList.toggle('flipped'); });
+  });
+
+  // image upload
+  root.querySelectorAll('.up-box').forEach(function (label) {
+    var input = label.querySelector('input[type=file]');
+    input.addEventListener('change', function (e) {
+      var file = e.target.files && e.target.files[0];
+      if (!file) return;
+      var reader = new FileReader();
+      reader.onload = function (ev) { label.style.backgroundImage = "url('" + ev.target.result + "')"; };
+      reader.readAsDataURL(file);
+    });
+  });
+});
+</script>
+
+<script>
+// Responsive scaling: fit the 1280px stage to the browser width, keeping every
+// design pixel; container height is corrected so no empty space appears below.
+(function () {
+  var W = 1280;
+  function fit() {
+    var vp = document.getElementById('scale-viewport');
+    var stage = document.getElementById('scale-stage');
+    if (!vp || !stage) return;
+    var s = document.documentElement.clientWidth / W;
+    window.__stageScale = s;
+    stage.style.transform = 'scale(' + s + ')';
+    var contentH = stage.offsetHeight * s;
+    var vh = window.innerHeight;
+    if (contentH < vh) {            // shorter than screen: center & fill viewport, no bottom gap
+      vp.style.height = vh + 'px';
+      stage.style.top = ((vh - contentH) / 2) + 'px';
+    } else {
+      vp.style.height = contentH + 'px';
+      stage.style.top = '0px';
+    }
+  }
+  window.__fitStage = fit;
+  window.addEventListener('resize', fit);
+  window.addEventListener('orientationchange', fit);
+  window.addEventListener('load', fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  if (document.readyState !== 'loading') fit();
+  else document.addEventListener('DOMContentLoaded', fit);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>현 태권도</title>
+<style>
+  html,body{margin:0;padding:0;background:#ffffff;}
+  *{box-sizing:border-box;}
+  /* responsive scaling: 1280px fixed stage scaled to browser width */
+  #scale-viewport{position:relative;width:100%;overflow:hidden;}
+  #scale-stage{position:absolute;top:0;left:0;width:1280px;transform-origin:top left;}
+</style>
+</head>
+<body>
+<div id="scale-viewport"><div id="scale-stage">
+<div style="width:1280px;height:800px;margin:0 auto;position:relative;background:#ffffff;overflow:hidden;font-size:0;">
+  <img src="assets/page1.jpg" alt="현 태권도" style="display:block;width:1280px;height:800px;" />
+  <a href="Brand_v2.html" aria-label="입관 신청하기" style="position:absolute;left:38.4%;top:71.6%;width:23.8%;height:7.8%;display:block;border-radius:999px;cursor:pointer;text-decoration:none;background:transparent;"></a>
+</div>
+</div></div>
+
+<script>
+// Responsive scaling: fit the 1280px stage to the browser width, keeping every
+// design pixel; container height is corrected so no empty space appears below.
+(function () {
+  var W = 1280;
+  function fit() {
+    var vp = document.getElementById('scale-viewport');
+    var stage = document.getElementById('scale-stage');
+    if (!vp || !stage) return;
+    var s = document.documentElement.clientWidth / W;
+    window.__stageScale = s;
+    stage.style.transform = 'scale(' + s + ')';
+    var contentH = stage.offsetHeight * s;
+    var vh = window.innerHeight;
+    if (contentH < vh) {            // shorter than screen: center & fill viewport, no bottom gap
+      vp.style.height = vh + 'px';
+      stage.style.top = ((vh - contentH) / 2) + 'px';
+    } else {
+      vp.style.height = contentH + 'px';
+      stage.style.top = '0px';
+    }
+  }
+  window.__fitStage = fit;
+  window.addEventListener('resize', fit);
+  window.addEventListener('orientationchange', fit);
+  window.addEventListener('load', fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  if (document.readyState !== 'loading') fit();
+  else document.addEventListener('DOMContentLoaded', fit);
+})();
+</script>
+</body>
+</html>

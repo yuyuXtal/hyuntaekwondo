@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>현 태권도 · 브랜드</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  html{scroll-behavior:smooth;}
+  html,body{margin:0;padding:0;background:#ffffff;}
+  *{box-sizing:border-box;}
+  /* responsive scaling: 1280px fixed stage scaled to browser width */
+  #scale-viewport{position:relative;width:100%;overflow:hidden;}
+  #scale-stage{position:absolute;top:0;left:0;width:1280px;transform-origin:top left;}
+  .logo-tile{display:block;transition:transform .22s cubic-bezier(.4,0,.2,1);transform-origin:center center;will-change:transform;}
+  .logo-tile:hover{transform:scale(1.06);}
+  .loc-marker{transition:box-shadow .15s ease, background .15s ease;}
+  .loc-marker:hover{background:rgba(255,255,255,0.18);box-shadow:0 0 0 8px rgba(255,255,255,0.28);}
+</style>
+</head>
+<body>
+<div id="scale-viewport"><div id="scale-stage">
+<div style="width:1280px;margin:0 auto;position:relative;background:#ffffff;font-size:0;">
+
+  <!-- NAVY HERO: header + slider + pills -->
+  <div style="width:1280px;background:linear-gradient(180deg,#223582 0%,#223582 74%,#1a2865 79.4%,#1a2865 100%);position:relative;">
+
+    <!-- header -->
+    <div style="position:relative;width:1280px;">
+      <img src="assets/p2_header.jpg" style="display:block;width:1280px;height:262.5px;">
+      <div style="position:absolute;left:385px;top:46px;width:505px;height:50px;background:#223582;"></div>
+      <a href="Home_v2.html" aria-label="현 태권도 홈으로 이동" style="position:absolute;left:393px;top:53px;width:495px;height:37px;display:block;cursor:pointer;">
+        <img src="assets/logotype_header.png" style="display:block;width:495px;height:37px;">
+      </a>
+      <a href="Brand_v2.html" aria-label="현 태권도" style="position:absolute;left:900px;top:55px;width:130px;height:55px;display:block;cursor:pointer;"></a>
+      <a href="Instructor_v2.html" aria-label="사범진 소개" style="position:absolute;left:1090px;top:55px;width:145px;height:55px;display:block;cursor:pointer;"></a>
+    </div>
+
+    <!-- slider (center-mode carousel) -->
+    <div style="position:relative;width:1280px;height:622.5px;overflow:hidden;">
+      <div id="p2-track" style="position:absolute;top:2px;left:0;display:flex;gap:36px;will-change:transform;">
+        <img class="p2-slide" src="assets/slide_center.jpg" style="flex:0 0 852px;width:852px;height:566px;object-fit:cover;display:block;">
+      </div>
+      <div id="p2-prev" style="position:absolute;left:22px;top:255px;width:56px;height:56px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:3;">
+        <svg width="34" height="46" viewBox="0 0 24 24" fill="none" stroke="#d7dbe7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 4 7 12 15 20"></polyline></svg>
+      </div>
+      <div id="p2-next" style="position:absolute;right:22px;top:255px;width:56px;height:56px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:3;">
+        <svg width="34" height="46" viewBox="0 0 24 24" fill="none" stroke="#d7dbe7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 4 17 12 9 20"></polyline></svg>
+      </div>
+      <div id="p2-dots" style="position:absolute;left:0;right:0;top:590px;display:flex;align-items:center;justify-content:center;gap:14px;z-index:3;">
+        <span class="p2-dot" data-i="0" style="width:30px;height:13px;border-radius:7px;background:#ffffff;cursor:pointer;display:block;"></span>
+        <span class="p2-dot" data-i="1" style="width:13px;height:13px;border-radius:50%;background:#6f6f7d;cursor:pointer;display:block;"></span>
+        <span class="p2-dot" data-i="2" style="width:13px;height:13px;border-radius:50%;background:#6f6f7d;cursor:pointer;display:block;"></span>
+      </div>
+    </div>
+
+    <!-- pills -->
+    <div style="position:relative;width:1280px;">
+      <img src="assets/p2_pills.jpg" style="display:block;width:1280px;height:230px;">
+      <a href="#brand" style="position:absolute;left:278px;top:78px;width:225px;height:58px;display:block;cursor:pointer;"></a>
+      <a href="#schedule" style="position:absolute;left:598px;top:78px;width:160px;height:58px;display:block;cursor:pointer;"></a>
+      <a href="#location" style="position:absolute;left:872px;top:78px;width:128px;height:58px;display:block;cursor:pointer;"></a>
+    </div>
+
+  </div>
+
+  <!-- BRAND IDENTITY body -->
+  <div id="brand" style="width:1280px;scroll-margin-top:0;position:relative;">
+    <img src="assets/p2_brandbody.jpg" style="display:block;width:1280px;height:922.5px;">
+    <img class="logo-tile" src="assets/emblem.jpg" style="position:absolute;left:640.75px;top:175.5px;width:572.5px;height:484.25px;">
+    <div class="copy-swatch" data-hex="#CEA542" title="클릭하여 HEX 복사" style="position:absolute;left:635px;top:808.75px;width:78.5px;height:113.75px;cursor:pointer;"></div>
+    <div class="copy-swatch" data-hex="#223582" title="클릭하여 HEX 복사" style="position:absolute;left:931.25px;top:808.75px;width:78.5px;height:113.75px;cursor:pointer;"></div>
+  </div>
+
+  <!-- LOGOTYPE -->
+  <div style="position:relative;width:1280px;height:732.5px;">
+    <img src="assets/p2_logotype.jpg" style="display:block;width:1280px;height:732.5px;">
+    <img class="logo-tile" src="assets/logo_tl.jpg" style="position:absolute;left:58.25px;top:205.5px;width:462.25px;height:127.75px;">
+    <img class="logo-tile" src="assets/logo_tr.jpg" style="position:absolute;left:635px;top:205.5px;width:578.5px;height:127.75px;">
+    <img class="logo-tile" src="assets/logo_bl.jpg" style="position:absolute;left:58.25px;top:400.75px;width:462.25px;height:127.5px;">
+    <img class="logo-tile" src="assets/logo_br.jpg" style="position:absolute;left:635px;top:400.75px;width:578.5px;height:127.5px;">
+  </div>
+
+  <!-- SIGNATURE -->
+  <div style="position:relative;width:1280px;height:355px;">
+    <img src="assets/p2_signature.jpg" style="display:block;width:1280px;height:355px;">
+    <img class="logo-tile" src="assets/sig_vp.jpg" style="position:absolute;left:59px;top:1.25px;width:259px;height:312.75px;">
+    <img class="logo-tile" src="assets/sig_vn.jpg" style="position:absolute;left:348.75px;top:1.25px;width:259px;height:312.75px;">
+    <img class="logo-tile" src="assets/sig_hp.jpg" style="position:absolute;left:713px;top:1.25px;width:500.5px;height:132.25px;">
+    <img class="logo-tile" src="assets/sig_hn.jpg" style="position:absolute;left:713.25px;top:181.75px;width:500.25px;height:132.25px;">
+  </div>
+
+  <!-- SCHEDULE -->
+  <div id="schedule" style="width:1280px;background:#ffffff;font-size:0;padding-bottom:70px;">
+    <img src="assets/sched_header.jpg" style="display:block;width:1280px;height:345px;">
+    <div style="width:1116px;margin:0 auto;">
+      <div id="sched-tabs" style="display:flex;gap:22px;align-items:center;justify-content:center;margin:6px 0 30px;flex-wrap:wrap;">
+        <button class="sched-tab" data-key="daily" style="font-family: 'Noto Sans KR',sans-serif; font-weight: 700; font-size: 22px; letter-spacing: .04em; padding: 11px 30px; border-radius: 999px; cursor: pointer; line-height: 1; outline: none; box-shadow: 0px 4px 3px 0px #61606026">DAILY</button>
+        <button class="sched-tab" data-key="weekly" style="font-family: 'Noto Sans KR',sans-serif; font-weight: 700; font-size: 22px; letter-spacing: .04em; padding: 11px 30px; border-radius: 999px; cursor: pointer; line-height: 1; outline: none; box-shadow: 0px 4px 3px 0px #61606026">WEEKLY</button>
+        <button class="sched-tab" data-key="annual" style="font-family: 'Noto Sans KR',sans-serif; font-weight: 700; font-size: 22px; letter-spacing: .04em; padding: 11px 30px; border-radius: 999px; cursor: pointer; line-height: 1; outline: none; box-shadow: 0px 4px 3px 0px #61606026">ANNUAL</button>
+        <button class="sched-tab" data-key="competition" style="font-family: 'Noto Sans KR',sans-serif; font-weight: 700; font-size: 22px; letter-spacing: .04em; padding: 11px 30px; border-radius: 999px; cursor: pointer; line-height: 1; outline: none; box-shadow: 0px 4px 3px 0px #61606026">COMPETITION</button>
+        <button class="sched-tab" data-key="special" style="font-family: 'Noto Sans KR',sans-serif; font-weight: 700; font-size: 22px; letter-spacing: .04em; padding: 11px 30px; border-radius: 999px; cursor: pointer; line-height: 1; outline: none; box-shadow: 0px 4px 3px 0px #61606026">SPECIAL</button>
+      </div>
+      <div id="sched-body"></div>
+    </div>
+  </div>
+
+  <!-- LOCATION -->
+  <div id="location" style="width:1280px;height:1105px;position:relative;">
+    <img src="assets/loc_title.jpg" style="display:block;width:1280px;height:337px;">
+
+    <!-- navy info sidebar (user-provided image, unmodified) -->
+    <img src="assets/loc_left.jpg" style="position:absolute;left:0px;top:377px;width:392px;height:678px;display:block;">
+
+    <!-- interactive map: drag to pan, wheel to zoom -->
+    <div style="position:absolute;left:415px;top:377px;width:799px;height:678px;background:#ffffff;border:3px solid #223582;border-radius:36px;box-sizing:border-box;padding:10px;box-shadow:0 10px 30px rgba(0,0,0,.14);">
+      <div id="loc-map-viewport" style="position:relative;width:773px;height:652px;border-radius:26px;overflow:hidden;cursor:grab;background:#e9e7e0;">
+        <div id="loc-map-layer" style="position:absolute;left:0;top:0;width:1002px;height:666px;transform-origin:0 0;will-change:transform;">
+          <img src="assets/map_base.png" draggable="false" style="display:block;width:1002px;height:666px;user-select:none;pointer-events:none;">
+          <div class="loc-marker" data-key="hq" style="position:absolute;left:418px;top:473px;width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;cursor:pointer;"></div>
+          <div class="loc-marker" data-key="home" style="position:absolute;left:687px;top:327px;width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;cursor:pointer;"></div>
+          <div class="loc-marker" data-key="park" style="position:absolute;left:539px;top:383px;width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;cursor:pointer;"></div>
+          <div class="loc-marker" data-key="school" style="position:absolute;left:374px;top:224px;width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;cursor:pointer;"></div>
+        </div>
+        <div id="loc-popup" style="position:absolute;display:none;z-index:5;width:240px;background:#ffffff;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.28);overflow:hidden;font-family:'Noto Sans KR',sans-serif;">
+          <div id="loc-popup-bar" style="height:6px;"></div>
+          <button id="loc-popup-close" aria-label="닫기" style="position:absolute;right:8px;top:12px;width:22px;height:22px;border:none;background:transparent;cursor:pointer;font-size:17px;line-height:1;color:#999;padding:0;">&times;</button>
+          <div style="padding:16px 18px 18px;">
+            <div id="loc-popup-title" style="font-weight:700;font-size:17px;color:#223582;margin-bottom:4px;"></div>
+            <div id="loc-popup-sub" style="font-size:13px;color:#666666;line-height:1.4;"></div>
+          </div>
+        </div>
+        <div style="position:absolute;right:14px;bottom:14px;font-size:15px;color:#8a8a8a;font-family:'Noto Sans KR',sans-serif;background:rgba(255,255,255,.85);padding:7px 14px;border-radius:8px;pointer-events:none;">드래그로 이동 · 휠로 확대/축소</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="width:1280px;height:110px;background:#ffffff;"></div>
+
+  <!-- FOOTER -->
+  <div style="width:1280px;background:#223582;font-family:'Noto Sans KR',sans-serif;">
+    <div style="padding:64px 60px 0;display:grid;grid-template-columns:280px 230px 150px 404px;gap:32px;">
+      <div>
+        <img src="assets/footer_logo.png" style="display:block;width:250px;height:auto;margin-bottom:16px;">
+        <div style="font-size:14px;color:#b9c0dd;">현태권도 | HYUN TAEKWONDO</div>
+      </div>
+      <div>
+        <div style="color:#CEA542;font-weight:700;font-size:14px;letter-spacing:.05em;margin-bottom:18px;">LOCATION</div>
+        <div style="font-size:14px;color:#e3e6f2;line-height:1.6;">
+          <div><span style="font-weight:700;">Address.</span> 서울특별시 마포구 ××로 156<br>HY타워 1F 현태권도</div>
+          <div style="margin-top:11px;"><span style="font-weight:700;">Tel.</span> 02-××54-22××</div>
+          <div style="margin-top:11px;"><span style="font-weight: 700;">Hours.</span> Mon-Fri 13:00 - 22:00<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Sat 10:00 - 15:00</div>
+          <div style="margin-top: 11px; width: 237px; height: 42px"><span style="font-weight:700;">Closed.</span> Sunday &amp; National Holidays</div>
+        </div>
+      </div>
+      <div>
+        <div style="box-sizing: border-box"><div style="color:#CEA542;font-weight:700;font-size:14px;letter-spacing:.05em;margin-bottom:18px;">NAVIGATION</div><div style="display:flex;flex-direction:column;gap:11px;font-size:14px;color:#e3e6f2;line-height:1.5;">
+          <a href="Home_v2.html" style="color:inherit;text-decoration:none;">• 홈 (Home)</a>
+          <a href="Brand_v2.html" style="color:inherit;text-decoration:none;">• 현태권도</a>
+          <a href="Instructor_v2.html" style="color:inherit;text-decoration:none;">• 사범진 소개</a>
+        </div></div>
+
+      </div>
+      <div style="width: 298px; height: 249px">
+        <div style="color:#CEA542;font-weight:700;font-size:14px;letter-spacing:.05em;margin-bottom:18px;">INFORMATION</div>
+        <div style="font-size: 13.5px; color: #e3e6f2; line-height: 1.9; white-space: nowrap; width: 294px; height: 112px">
+          • 유치부 · 초등부 · 중고등부 · 성인부· 선수부 운영<br>
+          • 체험수업 및 입관 상담 가능<br>
+          • 건물 내 주차 가능<br>
+          • 안전교육 및 보험 가입 완료
+        </div>
+      </div>
+    </div><div style="margin:48px 60px 0;padding:26px 0;border-top:1px solid rgba(255,255,255,.14);">
+      <div style="color:#CEA542;font-weight:700;font-size:13px;letter-spacing:.05em;margin-bottom:12px;">NOTICE</div>
+      <div style="font-size:12.5px;color:#9aa3c9;line-height:1.7;">
+        본 사이트에 등장하는 모든 인물, 사건, 단체 및 설정은 실제와 무관한 가상의 창작 콘텐츠입니다.<br>
+        본 사이트의 이미지 및 콘텐츠의 무단 복제·배포를 금합니다.<br>
+        수업 일정 및 운영 시간은 내부 사정에 따라 변경될 수 있습니다.
+      </div>
+    </div>
+
+    <div style="margin:0 60px;padding:22px 0;border-top:1px solid rgba(255,255,255,.14);text-align:center;font-size:12.5px;color:#8f99c4;">© 2026 HYUN TAEKWONDO. All Rights Reserved.</div>
+  </div>
+
+</div>
+</div></div>
+
+<script>
+// Standalone re-implementation of the Brand.dc.html DCLogic (componentDidMount).
+document.addEventListener('DOMContentLoaded', function () {
+  // ===== center-mode carousel with seamless loop =====
+  const IMGS = ['assets/car_trophy.png','assets/car_dojang.png','assets/car_arena.png'];
+  const SLIDE_W = 852, GAP = 36, PITCH = SLIDE_W + GAP, CENTER_OFFSET = 214;
+  const root = document;
+  const track = root.getElementById('p2-track');
+  const dots = Array.from(root.querySelectorAll('.p2-dot'));
+  const N = IMGS.length;
+  // build track: [cloneLast, ...slides, cloneFirst]
+  if (track) {
+    const order = [IMGS[N-1], ...IMGS, IMGS[0]];
+    track.innerHTML = order.map(src =>
+      '<img class="p2-slide" src="' + src + '" style="flex:0 0 ' + SLIDE_W + 'px;width:' + SLIDE_W + 'px;height:566px;object-fit:cover;display:block;">'
+    ).join('');
+  }
+  let pos = 2;            // start on middle slide (dojang) -> middle dot active
+  let animating = false;
+  const place = (animate) => {
+    if (!track) return;
+    track.style.transition = animate ? 'transform .5s cubic-bezier(.4,0,.2,1)' : 'none';
+    track.style.transform = 'translateX(' + (CENTER_OFFSET - pos * PITCH) + 'px)';
+  };
+  const dataIdx = () => ((pos - 1) % N + N) % N;
+  const renderDots = () => {
+    const di = dataIdx();
+    dots.forEach((d,i) => {
+      if (i === di) { d.style.width='30px'; d.style.borderRadius='7px'; d.style.background='#ffffff'; }
+      else { d.style.width='13px'; d.style.borderRadius='50%'; d.style.background='#6f6f7d'; }
+    });
+  };
+  const step = (dir) => {
+    if (animating) return;
+    animating = true;
+    pos += dir;
+    place(true);
+    renderDots();
+  };
+  if (track) {
+    track.addEventListener('transitionend', () => {
+      // snap across clones for seamless loop
+      if (pos === 0) { pos = N; place(false); }
+      else if (pos === N + 1) { pos = 1; place(false); }
+      animating = false;
+      renderDots();
+    });
+  }
+  const goToData = (di) => {
+    if (animating) return;
+    const target = di + 1; // real slide track position
+    if (target === pos) return;
+    animating = true;
+    pos = target;
+    place(true);
+    renderDots();
+  };
+  const prev = root.getElementById('p2-prev');
+  const next = root.getElementById('p2-next');
+  if (prev) prev.addEventListener('click', () => step(-1));
+  if (next) next.addEventListener('click', () => step(1));
+  dots.forEach((d,i) => d.addEventListener('click', () => goToData(i)));
+  place(false);
+  renderDots();
+
+  // COLOR GUIDE: click swatch to copy HEX
+  let toast = document.getElementById('copy-toast-live');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'copy-toast-live';
+    toast.style.cssText = "position:fixed;left:50%;bottom:40px;transform:translateX(-50%) translateY(20px);background:#223582;color:#fff;font-family:'Noto Serif KR',serif;font-size:15px;letter-spacing:.02em;padding:12px 20px;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .2s ease,transform .2s ease;z-index:99999;white-space:nowrap;";
+    document.body.appendChild(toast);
+  }
+  let toastTimer = null;
+  const showToast = (msg) => {
+    toast.textContent = msg;
+    toast.style.opacity = '1';
+    toast.style.transform = 'translateX(-50%) translateY(0)';
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      toast.style.opacity = '0';
+      toast.style.transform = 'translateX(-50%) translateY(20px)';
+    }, 1500);
+  };
+  const copyHex = (hex) => {
+    const done = () => showToast(hex + ' 복사되었습니다');
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(hex).then(done).catch(() => fallback(hex, done));
+    } else { fallback(hex, done); }
+  };
+  const fallback = (hex, done) => {
+    const ta = document.createElement('textarea');
+    ta.value = hex; ta.style.position='fixed'; ta.style.opacity='0';
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); } catch(e) {}
+    document.body.removeChild(ta); done();
+  };
+  root.querySelectorAll('.copy-swatch').forEach(sw => {
+    sw.addEventListener('click', () => copyHex(sw.getAttribute('data-hex')));
+  });
+
+  // ===== SCHEDULE: tabs swap the table =====
+  const NAVY = '#223582', GOLD = '#cea542', GRAY = '#666666';
+  const SCHED = {
+    daily: {
+      cols: ['시간','수업','대상','내용'],
+      colColors: [NAVY, GRAY, GOLD, GRAY],
+      rows: [
+        ['13:00~14:00','시설 점검','사범진','도장 및 장비 점검'],
+        ['14:00~15:00','엘리트 개인훈련','선수부','체력·품새 집중훈련'],
+        ['15:30~16:20','유치부','5~7세','기본 체조, 예절교육'],
+        ['16:30~17:20','초등부 A','초1~3','기본기, 품새'],
+        ['17:30~18:20','초등부 B','초4~6','품새, 겨루기'],
+        ['18:30~19:30','중·고등부','학생부','품새, 체력훈련'],
+        ['19:40~20:40','성인부','일반부','호신술, 실전 태권도'],
+        ['20:50~22:00','선수부','엘리트반','전문훈련 및 영상분석']
+      ]
+    },
+    weekly: {
+      cols: ['요일','주요 프로그램'],
+      colColors: [NAVY, GRAY],
+      rows: [
+        ['월요일','기본기 집중 훈련'],
+        ['화요일','품새 집중 훈련'],
+        ['수요일','체력 및 순발력 훈련'],
+        ['목요일','겨루기 및 실전훈련'],
+        ['금요일','승급 심사 대비'],
+        ['토요일','특별훈련 및 이벤트'],
+        ['일요일','휴관']
+      ]
+    },
+    annual: {
+      cols: ['월','주요 일정'],
+      colColors: [NAVY, GRAY],
+      rows: [
+        ['1월','신년 특별훈련 및 목표설정'],
+        ['2월','겨울방학 특강'],
+        ['3월','상반기 승급심사'],
+        ['4월','춘계 태권도대회 출전'],
+        ['5월','어린이날 행사 및 체육대회'],
+        ['6월','전국소년체전 준비'],
+        ['7월','여름 특별캠프'],
+        ['8월','전국 선수권대회 출전'],
+        ['9월','하반기 승급심사'],
+        ['10월','전국체육대회 참가'],
+        ['11월','성과 발표회 및 시범단 공연'],
+        ['12월','송년 행사 및 우수 수련생 시상']
+      ]
+    },
+    competition: {
+      cols: ['월','대회명','참가 대상'],
+      colColors: [NAVY, GRAY, GOLD],
+      rows: [
+        ['3월','전국태권도품새선수권대회','선수부'],
+        ['4월','대통령기 전국단체대항대회','중·고등부'],
+        ['5월','전국소년체육대회','초·중등부'],
+        ['7월','문화체육관광부장관기 대회','선수부'],
+        ['8월','한국중고등학교태권도연맹대회','학생부'],
+        ['9월','전국체육대회 선발전','선수부'],
+        ['10월','전국체육대회','선수부'],
+        ['11월','국제오픈태권도챔피언십','엘리트반']
+      ]
+    },
+    special: {
+      cols: ['월','주요 행사'],
+      colColors: [NAVY, GOLD],
+      rows: [
+        ['01월','신년 시범식'],
+        ['05월','어린이날 이벤트'],
+        ['07월','하계 수련 캠프'],
+        ['08월','엘리트 합숙 훈련'],
+        ['10월','전국체전 응원 행사'],
+        ['12월','승급·시상식 및 송년회']
+      ]
+    }
+  };
+  const esc = (s) => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const buildTable = (key) => {
+    const t = SCHED[key];
+    let h = "<table style=\"width:100%;border-collapse:collapse;font-family:'Noto Sans KR',sans-serif;border-top:2.5px solid " + NAVY + ";\">";
+    h += '<thead><tr>';
+    t.cols.forEach((c,ci) => {
+      h += '<th style="padding:20px 24px;text-align:center;color:' + NAVY + ';font-weight:700;font-size:21px;border-bottom:1px solid #d7d7d7;">' + esc(c) + '</th>';
+    });
+    h += '</tr></thead><tbody>';
+    t.rows.forEach((row,ri) => {
+      const fill = (ri % 2 === 0) ? 'background:rgba(34,53,130,0.10);' : 'background:#ffffff;';
+      h += '<tr style="' + fill + '">';
+      row.forEach((cell,ci) => {
+        const color = t.colColors[ci];
+        const align = ci === 0 ? 'center' : 'left';
+        const weight = (ci === 0 || color === GOLD) ? '600' : '400';
+        const nowrap = ci === 0 ? 'white-space:nowrap;' : 'word-break:keep-all;';
+        h += '<td style="padding:18px 24px;text-align:' + align + ';color:' + color + ';font-weight:' + weight + ';font-size:20px;line-height:1.35;border-bottom:1px solid #ececec;' + nowrap + '">' + esc(cell) + '</td>';
+      });
+      h += '</tr>';
+    });
+    h += '</tbody></table>';
+    return h;
+  };
+  const tabs = Array.from(root.querySelectorAll('.sched-tab'));
+  const body = root.getElementById('sched-body');
+  const styleTab = (btn, active) => {
+    if (active) {
+      btn.style.background = '#c6cbe2';
+      btn.style.border = '2.5px solid ' + NAVY;
+      btn.style.color = NAVY;
+    } else {
+      btn.style.background = '#ffffff';
+      btn.style.border = '2.5px solid ' + GOLD;
+      btn.style.color = GOLD;
+    }
+  };
+  const selectTab = (key) => {
+    tabs.forEach(b => styleTab(b, b.getAttribute('data-key') === key));
+    if (body) body.innerHTML = buildTable(key);
+    if (window.__fitStage) window.__fitStage(); // table height changed -> recompute
+  };
+  tabs.forEach(b => b.addEventListener('click', () => selectTab(b.getAttribute('data-key'))));
+  selectTab('daily');
+
+  // ===== LOCATION: draggable / zoomable map with clickable markers =====
+  const viewport = root.getElementById('loc-map-viewport');
+  const layer = root.getElementById('loc-map-layer');
+  if (viewport && layer) {
+    const MAP_W = 1002, MAP_H = 666;
+    const MIN_ZOOM = 1, MAX_ZOOM = 4;
+    let zoom = 1.5, panX = 0, panY = 0;
+
+    const clampPan = (px, py, z) => {
+      const minX = viewport.clientWidth - MAP_W * z;
+      const minY = viewport.clientHeight - MAP_H * z;
+      return { x: Math.min(0, Math.max(minX, px)), y: Math.min(0, Math.max(minY, py)) };
+    };
+    const apply = () => {
+      layer.style.transform = 'translate(' + panX + 'px,' + panY + 'px) scale(' + zoom + ')';
+    };
+
+    const vw = viewport.clientWidth, vh = viewport.clientHeight;
+    const c0 = clampPan(vw / 2 - 418 * zoom, vh / 2 - 473 * zoom, zoom);
+    panX = c0.x; panY = c0.y;
+    apply();
+
+    const popup = root.getElementById('loc-popup');
+    const popupBar = root.getElementById('loc-popup-bar');
+    const popupTitle = root.getElementById('loc-popup-title');
+    const popupSub = root.getElementById('loc-popup-sub');
+    const closeBtn = root.getElementById('loc-popup-close');
+    const PLACES = {
+      hq: { title: '현 태권도', sub: '본원 · 도장 위치', color: '#223582' },
+      home: { title: '윤태현의 자택', sub: '거주 중인 오피스텔', color: '#CEA542' },
+      park: { title: '새벽 러닝 코스', sub: '윤태현이 즐겨 달리는 공원', color: '#F15A24' },
+      school: { title: '□□사립초등학교', sub: '이시언이 재학 중인 학교', color: '#FF57AB' }
+    };
+    const showPopup = (markerEl, key) => {
+      const info = PLACES[key];
+      if (!info || !popup) return;
+      popupTitle.textContent = info.title;
+      popupSub.textContent = info.sub;
+      popupBar.style.background = info.color;
+      const mRect = markerEl.getBoundingClientRect();
+      const vRect = viewport.getBoundingClientRect();
+      popup.style.display = 'block';
+      const pw = popup.offsetWidth || 240, ph = popup.offsetHeight || 90;
+      const S = window.__stageScale || 1; // rects are scaled screen px -> stage px
+      let left = ((mRect.left - vRect.left) + mRect.width / 2) / S - pw / 2;
+      let top = (mRect.top - vRect.top) / S - ph - 14;
+      left = Math.min(Math.max(left, 8), viewport.clientWidth - pw - 8);
+      top = Math.max(top, 8);
+      popup.style.left = left + 'px';
+      popup.style.top = top + 'px';
+    };
+    root.querySelectorAll('.loc-marker').forEach(m => {
+      m.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showPopup(m, m.getAttribute('data-key'));
+      });
+    });
+    if (closeBtn) closeBtn.addEventListener('click', (e) => { e.stopPropagation(); popup.style.display = 'none'; });
+
+    let dragging = false, sx = 0, sy = 0, spx = 0, spy = 0;
+    const startDrag = (clientX, clientY, target) => {
+      if (target && target.closest && target.closest('.loc-marker')) return false;
+      if (popup) popup.style.display = 'none';
+      dragging = true; sx = clientX; sy = clientY; spx = panX; spy = panY;
+      return true;
+    };
+    const moveDrag = (clientX, clientY) => {
+      if (!dragging) return;
+      const S = window.__stageScale || 1; // convert screen delta -> stage px
+      const nx = spx + (clientX - sx) / S, ny = spy + (clientY - sy) / S;
+      const c = clampPan(nx, ny, zoom);
+      panX = c.x; panY = c.y; apply();
+    };
+    const endDrag = () => { if (dragging) { dragging = false; viewport.style.cursor = 'grab'; } };
+
+    viewport.addEventListener('mousedown', (e) => {
+      if (startDrag(e.clientX, e.clientY, e.target)) { viewport.style.cursor = 'grabbing'; e.preventDefault(); }
+    });
+    window.addEventListener('mousemove', (e) => moveDrag(e.clientX, e.clientY));
+    window.addEventListener('mouseup', endDrag);
+
+    viewport.addEventListener('touchstart', (e) => {
+      const t = e.touches[0];
+      startDrag(t.clientX, t.clientY, e.target);
+    }, { passive: true });
+    viewport.addEventListener('touchmove', (e) => {
+      if (!dragging) return;
+      const t = e.touches[0];
+      moveDrag(t.clientX, t.clientY);
+    }, { passive: true });
+    viewport.addEventListener('touchend', endDrag);
+
+    viewport.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      const rect = viewport.getBoundingClientRect();
+      const S = window.__stageScale || 1; // rect is in scaled screen px -> stage px
+      const mx = (e.clientX - rect.left) / S, my = (e.clientY - rect.top) / S;
+      const mapX = (mx - panX) / zoom, mapY = (my - panY) / zoom;
+      const factor = e.deltaY < 0 ? 1.12 : 1 / 1.12;
+      const newZoom = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, zoom * factor));
+      const c = clampPan(mx - mapX * newZoom, my - mapY * newZoom, newZoom);
+      zoom = newZoom; panX = c.x; panY = c.y; apply();
+    }, { passive: false });
+  }
+});
+</script>
+
+<script>
+// Responsive scaling: fit the 1280px stage to the browser width, keeping every
+// design pixel; container height is corrected so no empty space appears below.
+(function () {
+  var W = 1280;
+  function fit() {
+    var vp = document.getElementById('scale-viewport');
+    var stage = document.getElementById('scale-stage');
+    if (!vp || !stage) return;
+    var s = document.documentElement.clientWidth / W;
+    window.__stageScale = s;
+    stage.style.transform = 'scale(' + s + ')';
+    var contentH = stage.offsetHeight * s;
+    var vh = window.innerHeight;
+    if (contentH < vh) {            // shorter than screen: center & fill viewport, no bottom gap
+      vp.style.height = vh + 'px';
+      stage.style.top = ((vh - contentH) / 2) + 'px';
+    } else {
+      vp.style.height = contentH + 'px';
+      stage.style.top = '0px';
+    }
+  }
+  window.__fitStage = fit;
+  window.addEventListener('resize', fit);
+  window.addEventListener('orientationchange', fit);
+  window.addEventListener('load', fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  if (document.readyState !== 'loading') fit();
+  else document.addEventListener('DOMContentLoaded', fit);
+})();
+</script>
+</body>
+</html>
